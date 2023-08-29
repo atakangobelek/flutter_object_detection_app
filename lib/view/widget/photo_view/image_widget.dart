@@ -2,9 +2,8 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_video/view/widget/text_form.dart';
-
 import '../../../model/object_detectio_model.dart';
-import '../../photo_page.dart';
+import '../../../view_model/image_handling_view_model.dart';
 import '../bounding_box.dart';
 
 class ImageWidget extends StatefulWidget {

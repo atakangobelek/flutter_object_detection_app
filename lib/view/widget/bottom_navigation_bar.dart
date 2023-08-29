@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_video/view/photo_page.dart';
-
-import '../video_page.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -43,7 +40,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
     return BottomNavigationBar(
       currentIndex: currentIndex,
       onTap: _onNavItemTapped,
-      items: [
+      items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           label: 'Home',

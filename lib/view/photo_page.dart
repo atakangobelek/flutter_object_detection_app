@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_video/view/widget/appbar.dart';
+import 'package:flutter_video/view/widget/appbar_web.dart';
 import 'package:flutter_video/view/widget/bottom_navigation_bar.dart';
 import 'package:flutter_video/view/widget/drawer.dart';
 import 'package:flutter_video/view/widget/photo_view/file_picker_button.dart';
 import 'package:flutter_video/view/widget/photo_view/image_widget.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter_video/view/widget/photo_view/text_form_image_container.dart';
 
-final imageProvider = StateProvider<PlatformFile?>((ref) {
-  return null;
-});
+
 
 class PhotoPicker extends StatefulWidget {
   const PhotoPicker({Key? key}) : super(key: key);
@@ -26,7 +22,7 @@ class _PhotoPickerState extends State<PhotoPicker> {
       builder: (BuildContext context, BoxConstraints constraints) {
         if (constraints.maxWidth > 1200) {
           return Scaffold(
-            appBar: const Appbar(topic: 'Video Player'),
+            appBar: const AppbarWidget(topic: 'Photo Taker'),
             drawer: const NavigationRailDrawer(),
             body: SafeArea(
               child: Padding(
@@ -68,11 +64,9 @@ class _PhotoPickerState extends State<PhotoPicker> {
               ),
             ),
           );
-        } else if (constraints.maxWidth > 450) {
+        } else if (constraints.maxWidth > 500) {
           return Scaffold(
-              appBar: AppBar(
-                title: const Text('data'),
-              ),
+              appBar: const AppbarWidget(topic: 'Photo Taker'),
               drawer: const NavigationRailDrawer(),
               body: SingleChildScrollView(
                 child: SafeArea(
@@ -115,9 +109,7 @@ class _PhotoPickerState extends State<PhotoPicker> {
               ));
         } else {
           return Scaffold(
-            appBar: AppBar(
-              title: const Text('data'),
-            ),
+            appBar: AppbarWidget(topic: 'Photo Taker'),
             body: SingleChildScrollView(
               child: SafeArea(
                 child: Padding(

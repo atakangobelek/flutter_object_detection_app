@@ -4,8 +4,8 @@ class DummyData {
       "second": 1,
       "object": [
         {
-          "preview_height": 50,
-          "preview_width": 50,
+          "preview_height": 150,
+          "preview_width": 250,
           "detectedClass": "Person",
           "confidenceInClass": 0.85,
           "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
@@ -16,8 +16,8 @@ class DummyData {
       "second": 2,
       "object": [
         {
-          "preview_height": 600,
-          "preview_width": 700,
+          "preview_height": 500,
+          "preview_width": 400,
           "detectedClass": "Person",
           "confidenceInClass": 0.85,
           "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
@@ -35,8 +35,8 @@ class DummyData {
       "second": 3,
       "object": [
         {
-          "preview_height": 600,
-          "preview_width": 700,
+          "preview_height": 300,
+          "preview_width": 200,
           "detectedClass": "Person",
           "confidenceInClass": 0.85,
           "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}

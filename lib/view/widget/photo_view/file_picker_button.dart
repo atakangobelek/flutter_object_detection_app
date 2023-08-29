@@ -1,7 +1,7 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../photo_page.dart';
+import '../../../view_model/image_handling_view_model.dart';
 
 class FilePickerButton extends StatefulWidget {
   const FilePickerButton({Key? key}) : super(key: key);
@@ -15,12 +15,12 @@ class _FilePickerButtonState extends State<FilePickerButton> {
   Widget build(BuildContext context) {
     return Consumer(
       builder: (context, ref, child) {
-        return ElevatedButton(
+        return ElevatedButton(                                
           onPressed: () async {
+            //File Picker
             FilePickerResult? result = await FilePicker.platform.pickFiles();
             if (result == null || result.files.isEmpty) return;
             PlatformFile? image = result.files.first;
-            setState(() {});
             ref.read(imageProvider.notifier).state = image;
           },
           child: const Text(

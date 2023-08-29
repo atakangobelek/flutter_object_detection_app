@@ -68,7 +68,7 @@ class _TextFormImageContainerState extends State<TextFormImageContainer> {
                   ],
                 ),
               ),
-              Divider(),
+              const Divider(),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
@@ -94,7 +94,7 @@ class _TextFormImageContainerState extends State<TextFormImageContainer> {
                   ],
                 ),
               ),
-              Divider(),
+              const Divider(),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
@@ -122,7 +122,7 @@ class _TextFormImageContainerState extends State<TextFormImageContainer> {
                   ],
                 ),
               ),
-              Divider(),
+              const Divider(),
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
