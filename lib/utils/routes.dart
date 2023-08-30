@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 
-import '../view/photo_page.dart';
-import '../view/video_page.dart';
+import '../view/photo_picker_view.dart';
+import '../view/video_player_view.dart';
 
 final Map<String, WidgetBuilder> routes = {
   '/video': (BuildContext context) => const VideoPlayerView(),
-  '/image': (BuildContext context) => const PhotoPicker(),
+  '/image': (BuildContext context) => const PhotoPickerView(),
 
 };

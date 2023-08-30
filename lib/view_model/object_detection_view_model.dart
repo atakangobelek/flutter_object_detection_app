@@ -22,7 +22,7 @@
   return _orderList;
 }); */
 
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+/* import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_video/utils/map.dart';
 
 import '../model/object_detectio_model.dart';
@@ -38,3 +38,36 @@ final videoProvider = StateProvider<List<VideoModel>>(
     return videoModel;
   },
 );
+ */
+
+
+
+
+import 'package:dio/dio.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../model/object_detectio_model.dart';
+import '../service/get.dart';
+
+final videoProvider =
+    FutureProvider.autoDispose<List<VideoModel>>((ref) async {
+  final apiService = ApiService();
+
+  List<dynamic> response;
+
+  try {
+    response = await apiService.fetchData('');
+  } catch (e) {
+    if (e is DioException) {
+    }
+    rethrow;
+  }
+
+  List<VideoModel> _objectList = [];
+  if (response != null) {
+    _objectList = (response as List)
+        .map((e) => VideoModel.fromMap(e))
+        .toList();
+  }
+  return _objectList;
+});

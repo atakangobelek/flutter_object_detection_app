@@ -63,34 +63,11 @@ class DummyData {
           "preview_width": 700,
           "detectedClass": "Person",
           "confidenceInClass": 0.85,
-          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+          "rect": {"x": 0.4, "y": 0.8, "w": 0.7, "h": 0.3}
         },
       ],
     },
-    {
-      "second": 6,
-      "object": [
-        {
-          "preview_height": 600,
-          "preview_width": 700,
-          "detectedClass": "Person",
-          "confidenceInClass": 0.85,
-          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
-        },
-      ],
-    },
-    {
-      "second": 7,
-      "object": [
-        {
-          "preview_height": 600,
-          "preview_width": 700,
-          "detectedClass": "Person",
-          "confidenceInClass": 0.85,
-          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
-        },
-      ],
-    },
+
   ];
 
   /* [

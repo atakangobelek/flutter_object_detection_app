@@ -1,14 +1,15 @@
 import 'package:dio/dio.dart';
+import 'package:flutter_video/utils/map.dart';
 
 class ApiService {
   final Dio _dio = Dio(); // Dio nesnesini oluşturuyoruz
 
-  Future<dynamic> fetchData(String endpoint) async {
+  Future<List<dynamic>> fetchData(String endpoint) async {
     try {
-      final response = await _dio.get(endpoint);
+      final response =  DummyData.dummyData;
 
-      if (response.statusCode == 200) {
-        return response.data;
+      if (response != null) {
+        return response;
       } else {
         throw Exception('Failed to load data');
       }
