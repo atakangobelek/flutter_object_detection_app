@@ -49,14 +49,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../model/object_detectio_model.dart';
 import '../service/get.dart';
 
-final videoProvider =
+final objectProvider =
     FutureProvider.autoDispose<List<VideoModel>>((ref) async {
   final apiService = ApiService();
 
   List<dynamic> response;
 
   try {
-    response = await apiService.fetchData('');
+    response = await apiService.fetchData('');               //Dummy Data come from ApiService
   } catch (e) {
     if (e is DioException) {
     }

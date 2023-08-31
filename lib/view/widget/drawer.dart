@@ -115,6 +115,8 @@ class _NavigationRailDrawerState extends State<NavigationRailDrawer> {
       
     } else if (routeName == '/image') {
       currentIndex = 1;
+    }else if (routeName == '/video_picker') {
+      currentIndex = 2;
     }
   }
 
@@ -140,6 +142,9 @@ class _NavigationRailDrawerState extends State<NavigationRailDrawer> {
               title: const Text('Home'),
               selected: currentIndex == 0,
               onTap: () {
+                setState(() {
+                  
+                });
                 Navigator.pushNamed(context, '/video');
               },
             ),
@@ -147,7 +152,20 @@ class _NavigationRailDrawerState extends State<NavigationRailDrawer> {
               title: const Text('PhotoPicker'),
               selected: currentIndex == 1,
               onTap: () {
+                setState(() {
+                  
+                });
                 Navigator.pushNamed(context, '/image');
+              },
+            ),
+            ListTile(
+              title: const Text('PhotoPicker'),
+              selected: currentIndex == 2,
+              onTap: () {
+                setState(() {
+                  
+                });
+                Navigator.pushNamed(context, '/video_picker');
               },
             ),
           ],

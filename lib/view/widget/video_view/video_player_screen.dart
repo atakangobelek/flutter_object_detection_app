@@ -15,7 +15,7 @@ class VideoPlayerScreen extends StatefulWidget {
 }
 
 class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
-  late VideoPlayerController _phenikaaVideoPlayerController;
+  late VideoPlayerController _VideoPlayerController;
   late Future<void> _initializeVideoPlayerFuture;
 
   @override
@@ -25,23 +25,25 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
     // Create and store the VideoPlayerController. The VideoPlayerController
     // offers several different constructors to play videos from assets, files,
     // or the internet.
-    _phenikaaVideoPlayerController = VideoPlayerController.networkUrl(
+    _VideoPlayerController = VideoPlayerController.networkUrl(
       Uri.parse(
         'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
       ),
     );
+    //_VideoPlayerController = VideoPlayerController.asset("assets/videos/video2.mp4");
 
+    
     // Initialize the controller and store the Future for later use.
-    _initializeVideoPlayerFuture = _phenikaaVideoPlayerController.initialize();
+    _initializeVideoPlayerFuture = _VideoPlayerController.initialize();
 
     // Use the controller to loop the video.
-    _phenikaaVideoPlayerController.setLooping(false);
+    _VideoPlayerController.setLooping(false);
   }
 
   @override
   void dispose() {
     // Pause the video before disposing of the VideoPlayerController to stop playback.
-    _phenikaaVideoPlayerController.dispose();
+    _VideoPlayerController.dispose();
 
     super.dispose();
   }
@@ -50,7 +52,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   Widget build(BuildContext context) {
     return Consumer(
       builder: (context, ref, child) {
-        final videoCoordinats = ref.watch(videoProvider);
+        final videoCoordinats = ref.watch(objectProvider);
         return videoCoordinats.when(
             data: (x) {
               return Container(
@@ -66,16 +68,18 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                             children: [
                               // If the VideoPlayerController has finished initialization, use
                               // the data it provides to limit the aspect ratio of the video.
-                              AspectRatio(
-                                aspectRatio: _phenikaaVideoPlayerController
-                                    .value.aspectRatio,
-                                // Use the VideoPlayer widget to display the video.
-                                child:
-                                    VideoPlayer(_phenikaaVideoPlayerController),
+                              Expanded(
+                                child: AspectRatio(
+                                  aspectRatio: _VideoPlayerController
+                                      .value.aspectRatio,
+                                  // Use the VideoPlayer widget to display the video.
+                                  child:
+                                      VideoPlayer(_VideoPlayerController),
+                                ),
                               ),
                               // show the video progress & scrubbing by touch event on it
                               VideoProgressIndicator(
-                                _phenikaaVideoPlayerController,
+                                _VideoPlayerController,
                                 allowScrubbing: true,
                                 padding: EdgeInsets.zero,
                                 colors: const VideoProgressColors(
@@ -90,17 +94,17 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                                   const SizedBox(width: 2),
                                   InkWell(
                                     onTap: () {
-                                      if (_phenikaaVideoPlayerController
+                                      if (_VideoPlayerController
                                           .value.isPlaying) {
-                                        _phenikaaVideoPlayerController.pause();
+                                        _VideoPlayerController.pause();
                                       } else {
-                                        _phenikaaVideoPlayerController.play();
+                                        _VideoPlayerController.play();
                                       }
                                     },
                                     child: ValueListenableBuilder<
                                         VideoPlayerValue>(
                                       valueListenable:
-                                          _phenikaaVideoPlayerController,
+                                          _VideoPlayerController,
                                       builder: (_, _videoPlayerValue, __) {
                                         return Icon(
                                           _videoPlayerValue.isPlaying
@@ -115,9 +119,9 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                                   const SizedBox(width: 2),
                                   InkWell(
                                     onTap: () {
-                                      _phenikaaVideoPlayerController
+                                      _VideoPlayerController
                                           .seekTo(const Duration(seconds: 0));
-                                      _phenikaaVideoPlayerController.pause();
+                                      _VideoPlayerController.pause();
                                     },
                                     child:
                                         const Icon(Icons.stop_circle_outlined),
@@ -126,7 +130,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                                   // render duration video with current position / total video duration
                                   ValueListenableBuilder<VideoPlayerValue>(
                                     valueListenable:
-                                        _phenikaaVideoPlayerController,
+                                        _VideoPlayerController,
                                     builder: (_, _videoPlayerValue, __) {
                                       return Text(
                                         "00:${_videoPlayerValue.position.inSeconds.toString().padLeft(2, '0')}",
@@ -134,26 +138,26 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                                     },
                                   ),
                                   Text(
-                                    " / 00:${_phenikaaVideoPlayerController.value.duration.inSeconds.toString()}",
+                                    " / 00:${_VideoPlayerController.value.duration.inSeconds.toString()}",
                                   ),
                                   const Spacer(),
                                   //render Volume button
                                   InkWell(
                                     onTap: () {
-                                      if (_phenikaaVideoPlayerController
+                                      if (_VideoPlayerController
                                               .value.volume ==
                                           0.0) {
-                                        _phenikaaVideoPlayerController
+                                        _VideoPlayerController
                                             .setVolume(1.0);
                                       } else {
-                                        _phenikaaVideoPlayerController
+                                        _VideoPlayerController
                                             .setVolume(0.0);
                                       }
                                     },
                                     child: ValueListenableBuilder<
                                         VideoPlayerValue>(
                                       valueListenable:
-                                          _phenikaaVideoPlayerController,
+                                          _VideoPlayerController,
                                       builder: (_, _videoPlayerValue, __) {
                                         return Icon(
                                           _videoPlayerValue.volume == 0.0
@@ -184,7 +188,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
                       },
                     ),
                     ValueListenableBuilder<VideoPlayerValue>(
-                      valueListenable: _phenikaaVideoPlayerController,
+                      valueListenable: _VideoPlayerController,
                       builder: (_, _videoPlayerValue, __) {
                         int index = -1;
                         index = x.indexWhere((video) => video.second == _videoPlayerValue.position.inSeconds);
@@ -249,7 +253,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
 /* 
 ValueListenableBuilder<VideoPlayerValue>(
-          valueListenable: _phenikaaVideoPlayerController,
+          valueListenable: _VideoPlayerController,
           builder: (_, _videoPlayerValue, __) {
             if (_videoPlayerValue.position.inSeconds ==
                 widget.secondValue[i]) {
@@ -274,7 +278,7 @@ ValueListenableBuilder<VideoPlayerValue>(
 
 
         /* ValueListenableBuilder<VideoPlayerValue>(
-          valueListenable: _phenikaaVideoPlayerController,
+          valueListenable: _VideoPlayerController,
           builder: (_, _videoPlayerValue, __) {
             if (i == widget.secondValue.length - 1) {
               i = 0;
@@ -301,7 +305,7 @@ ValueListenableBuilder<VideoPlayerValue>(
 
 
         /* ValueListenableBuilder<VideoPlayerValue>(
-                valueListenable: _phenikaaVideoPlayerController,
+                valueListenable: _VideoPlayerController,
                 builder: (_, _videoPlayerValue, __) {
                   if (_videoPlayerValue.position.inSeconds ==
                       widget.secondValue[i]) {
@@ -362,13 +366,13 @@ ValueListenableBuilder<VideoPlayerValue>(
                         // the data it provides to limit the aspect ratio of the video.
                         AspectRatio(
                           aspectRatio:
-                              _phenikaaVideoPlayerController.value.aspectRatio,
+                              _VideoPlayerController.value.aspectRatio,
                           // Use the VideoPlayer widget to display the video.
-                          child: VideoPlayer(_phenikaaVideoPlayerController),
+                          child: VideoPlayer(_VideoPlayerController),
                         ),
                         // show the video progress & scrubbing by touch event on it
                         VideoProgressIndicator(
-                          _phenikaaVideoPlayerController,
+                          _VideoPlayerController,
                           allowScrubbing: true,
                           padding: EdgeInsets.zero,
                           colors: const VideoProgressColors(
@@ -383,15 +387,15 @@ ValueListenableBuilder<VideoPlayerValue>(
                             const SizedBox(width: 2),
                             InkWell(
                               onTap: () {
-                                if (_phenikaaVideoPlayerController
+                                if (_VideoPlayerController
                                     .value.isPlaying) {
-                                  _phenikaaVideoPlayerController.pause();
+                                  _VideoPlayerController.pause();
                                 } else {
-                                  _phenikaaVideoPlayerController.play();
+                                  _VideoPlayerController.play();
                                 }
                               },
                               child: ValueListenableBuilder<VideoPlayerValue>(
-                                valueListenable: _phenikaaVideoPlayerController,
+                                valueListenable: _VideoPlayerController,
                                 builder: (_, _videoPlayerValue, __) {
                                   return Icon(
                                     _videoPlayerValue.isPlaying
@@ -404,16 +408,16 @@ ValueListenableBuilder<VideoPlayerValue>(
                             const SizedBox(width: 2),
                             InkWell(
                               onTap: () {
-                                _phenikaaVideoPlayerController
+                                _VideoPlayerController
                                     .seekTo(const Duration(seconds: 0));
-                                _phenikaaVideoPlayerController.pause();
+                                _VideoPlayerController.pause();
                               },
                               child: const Icon(Icons.stop_circle_outlined),
                             ),
                             const SizedBox(width: 2),
                             // render duration video with current position / total video duration
                             ValueListenableBuilder<VideoPlayerValue>(
-                              valueListenable: _phenikaaVideoPlayerController,
+                              valueListenable: _VideoPlayerController,
                               builder: (_, _videoPlayerValue, __) {
                                 return Text(
                                   "00:${_videoPlayerValue.position.inSeconds.toString().padLeft(2, '0')}",
@@ -421,22 +425,22 @@ ValueListenableBuilder<VideoPlayerValue>(
                               },
                             ),
                             Text(
-                              " / 00:${_phenikaaVideoPlayerController.value.duration.inSeconds.toString()}",
+                              " / 00:${_VideoPlayerController.value.duration.inSeconds.toString()}",
                             ),
                             const Spacer(),
                             //render Volume button
                             InkWell(
                               onTap: () {
-                                if (_phenikaaVideoPlayerController
+                                if (_VideoPlayerController
                                         .value.volume ==
                                     0.0) {
-                                  _phenikaaVideoPlayerController.setVolume(1.0);
+                                  _VideoPlayerController.setVolume(1.0);
                                 } else {
-                                  _phenikaaVideoPlayerController.setVolume(0.0);
+                                  _VideoPlayerController.setVolume(0.0);
                                 }
                               },
                               child: ValueListenableBuilder<VideoPlayerValue>(
-                                valueListenable: _phenikaaVideoPlayerController,
+                                valueListenable: _VideoPlayerController,
                                 builder: (_, _videoPlayerValue, __) {
                                   return Icon(
                                     _videoPlayerValue.volume == 0.0
@@ -465,7 +469,7 @@ ValueListenableBuilder<VideoPlayerValue>(
                 },
               ),
               ValueListenableBuilder<VideoPlayerValue>(
-                valueListenable: _phenikaaVideoPlayerController,
+                valueListenable: _VideoPlayerController,
                 builder: (_, _videoPlayerValue, __) {
                   if (_videoPlayerValue.position.inSeconds == x[i].second) {
                     if (i == x.length - 1) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class OfferModel {
+class PhotoObjectModel {
   int previewHeight;
   int previewWidth;
   String detectedClass;
@@ -11,7 +11,7 @@ class OfferModel {
   double w;
   double h;
 
-  OfferModel()
+  PhotoObjectModel()
       : previewHeight = 600,
         previewWidth = 700,
         detectedClass = "Person",
@@ -22,7 +22,7 @@ class OfferModel {
         h = 0.2;
 }
 
-final offerModelProvider = Provider<OfferModel>((ref) => OfferModel());
+final offerModelProvider = Provider.autoDispose<PhotoObjectModel>((ref) => PhotoObjectModel());
 
 class TextFormWidget extends StatefulWidget {
   final String name;

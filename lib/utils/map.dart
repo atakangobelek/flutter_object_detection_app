@@ -67,6 +67,120 @@ class DummyData {
         },
       ],
     },
+    {
+      "second": 6,
+      "object": [
+        {
+          "preview_height": 500,
+          "preview_width": 400,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+        {
+          "preview_height": 600,
+          "preview_width": 700,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+        },
+      ],
+    },
+    {
+      "second": 7,
+      "object": [
+        {
+          "preview_height": 500,
+          "preview_width": 400,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+        {
+          "preview_height": 600,
+          "preview_width": 700,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+        },
+      ],
+    },
+    {
+      "second": 7,
+      "object": [
+        {
+          "preview_height": 500,
+          "preview_width": 400,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+        {
+          "preview_height": 600,
+          "preview_width": 700,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+        },
+      ],
+    },
+    {
+      "second": 7,
+      "object": [
+        {
+          "preview_height": 500,
+          "preview_width": 400,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+        {
+          "preview_height": 600,
+          "preview_width": 700,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+        },
+      ],
+    },
+    {
+      "second": 7,
+      "object": [
+        {
+          "preview_height": 500,
+          "preview_width": 400,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+        {
+          "preview_height": 600,
+          "preview_width": 700,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+        },
+      ],
+    },
+    {
+      "second": 7,
+      "object": [
+        {
+          "preview_height": 500,
+          "preview_width": 400,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+        {
+          "preview_height": 600,
+          "preview_width": 700,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+        },
+      ],
+    },
 
   ];
 

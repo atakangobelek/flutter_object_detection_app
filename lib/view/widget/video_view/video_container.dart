@@ -2,10 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_video/utils/map.dart';
 import 'package:flutter_video/view_model/object_detection_view_model.dart';
 
-import '../../../model/object_detectio_model.dart';
 
 class VideoContainer extends StatelessWidget {
   //VideoButtonContainer yap
@@ -16,7 +14,7 @@ class VideoContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer(
       builder: (context, ref, child) {
-        final videoSecond = ref.watch(videoProvider);
+        final videoSecond = ref.watch(objectProvider);
         return videoSecond.when(
             data: (data) {
               return Container(
@@ -29,7 +27,7 @@ class VideoContainer extends StatelessWidget {
                       return Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10.0),
-                          color: Colors.amber,
+                          color: Theme.of(context).colorScheme.surface,
                         ),
                         height: 75,
                         margin: const EdgeInsets.only(bottom: 10),
