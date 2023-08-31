@@ -6,7 +6,7 @@ import 'package:flutter_video/view_model/object_detection_view_model.dart';
 
 
 class VideoContainer extends StatelessWidget {
-  //VideoButtonContainer yap
+
   double? height;
   VideoContainer({Key? key, this.height}) : super(key: key);
 
@@ -20,7 +20,7 @@ class VideoContainer extends StatelessWidget {
               return Container(
                 padding: const EdgeInsets.only(right: 16, left: 16),
                 height:
-                    height == null ? 750 : height, //duzenle height null olamaz
+                    height == null ? 750 : height, 
                 child: ListView.builder(
                     itemCount: data.length,
                     itemBuilder: (BuildContext context, int index) {
@@ -35,7 +35,6 @@ class VideoContainer extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text('Second: ${data[index].second}'),
-                            /* Text('detectedClass ${DummyData.dummyData[index][0]['detectedClass']}') */
                           ],
                         ),
                       );

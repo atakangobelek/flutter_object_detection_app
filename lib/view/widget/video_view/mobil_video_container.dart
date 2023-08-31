@@ -6,7 +6,7 @@ import '../../../view_model/object_detection_view_model.dart';
 
 
 class MobilVideoContainer extends StatelessWidget {
-  //VideoButtonContainer yap
+
   double? height;
   MobilVideoContainer({Key? key, this.height}) : super(key: key);
 
