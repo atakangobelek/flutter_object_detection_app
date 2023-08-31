@@ -23,7 +23,7 @@ class _PhotoPickerViewState extends ConsumerState<PhotoPickerView> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth > 1200) {
+        if (constraints.maxWidth > 1200) {              
           return Scaffold(
             appBar: const AppbarWidget(topic: 'Photo Taker'),
             drawer: const NavigationRailDrawer(),
@@ -57,7 +57,6 @@ class _PhotoPickerViewState extends ConsumerState<PhotoPickerView> {
                                     height: 100,
                                     child: FilePickerButton(
                                       onPressed: () async {
-                                        //File Picker
                                         FilePickerResult? result =
                                             await FilePicker.platform.pickFiles(
                                           type: FileType.custom,
@@ -67,12 +66,9 @@ class _PhotoPickerViewState extends ConsumerState<PhotoPickerView> {
                                             'png'
                                           ],
                                         );
-                                        if (result == null ||
-                                            result.files.isEmpty) return;
-                                        PlatformFile? image =
-                                            result.files.first;
-                                        ref.read(imageProvider.notifier).state =
-                                            image;
+                                        if (result == null || result.files.isEmpty) return;
+                                        PlatformFile? image =result.files.first;   
+                                        ref.read(imageProvider.notifier).state =image;                      //photo provider for image widget
                                       },
                                     ),
                                   ),
@@ -88,7 +84,7 @@ class _PhotoPickerViewState extends ConsumerState<PhotoPickerView> {
               ),
             ),
           );
-        } else if (constraints.maxWidth > 500) {
+        } else if (constraints.maxWidth > 500) {    //for tablet
           return Scaffold(
               appBar: const AppbarWidget(topic: 'Photo Taker'),
               drawer: const NavigationRailDrawer(),
@@ -143,8 +139,8 @@ class _PhotoPickerViewState extends ConsumerState<PhotoPickerView> {
                 ),
               ));
         } else {
-          return Scaffold(
-            appBar: AppbarWidget(topic: 'Photo Taker'),
+          return Scaffold(                                                   //for mobil
+            appBar: const AppbarWidget(topic: 'Photo Taker'),
             body: SingleChildScrollView(
               child: SafeArea(
                 child: Padding(
@@ -182,7 +178,6 @@ class _PhotoPickerViewState extends ConsumerState<PhotoPickerView> {
             floatingActionButton: Container(
               child: FilePickerButton(
                 onPressed: () async {
-                  //File Picker
                   FilePickerResult? result =
                       await FilePicker.platform.pickFiles();
                   if (result == null || result.files.isEmpty) return;

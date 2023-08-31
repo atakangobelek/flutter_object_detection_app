@@ -29,14 +29,12 @@ class Object {
     final int previewHeight;
     final int previewWidth;
     final String detectedClass;
-    final double confidenceInClass;
     final Rect rect;
 
     Object({
         required this.previewHeight,
         required this.previewWidth,
         required this.detectedClass,
-        required this.confidenceInClass,
         required this.rect,
     });
 
@@ -44,7 +42,6 @@ class Object {
         previewHeight: json["preview_height"],
         previewWidth: json["preview_width"],
         detectedClass: json["detectedClass"],
-        confidenceInClass: json["confidenceInClass"].toDouble(),
         rect: Rect.fromMap(json["rect"]),
     );
 
@@ -52,7 +49,6 @@ class Object {
         "preview_height": previewHeight,
         "preview_width": previewWidth,
         "detectedClass": detectedClass,
-        "confidenceInClass": confidenceInClass,
         "rect": rect.toMap(),
     };
 }

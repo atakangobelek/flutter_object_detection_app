@@ -16,18 +16,18 @@ class DummyData {
       "second": 2,
       "object": [
         {
-          "preview_height": 500,
+          "preview_height": 300,
           "preview_width": 400,
-          "detectedClass": "Person",
+          "detectedClass": "Cat",
           "confidenceInClass": 0.85,
           "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
         },
         {
-          "preview_height": 600,
-          "preview_width": 700,
-          "detectedClass": "Person",
+          "preview_height": 700,
+          "preview_width": 800,
+          "detectedClass": "Dog",
           "confidenceInClass": 0.85,
-          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+          "rect": {"x": 0.4, "y": 0.3, "w": 0.2, "h": 0.1}
         },
       ],
     },
@@ -35,11 +35,11 @@ class DummyData {
       "second": 3,
       "object": [
         {
-          "preview_height": 300,
-          "preview_width": 200,
-          "detectedClass": "Person",
+          "preview_height": 200,
+          "preview_width": 300,
+          "detectedClass": "Car",
           "confidenceInClass": 0.85,
-          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+          "rect": {"x": 0.4, "y": 0.2, "w": 0.2, "h": 0.1}
         },
       ],
     },
@@ -49,7 +49,7 @@ class DummyData {
         {
           "preview_height": 600,
           "preview_width": 700,
-          "detectedClass": "Person",
+          "detectedClass": "Man",
           "confidenceInClass": 0.85,
           "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
         },
@@ -59,11 +59,11 @@ class DummyData {
       "second": 5,
       "object": [
         {
-          "preview_height": 600,
-          "preview_width": 700,
-          "detectedClass": "Person",
+          "preview_height": 150,
+          "preview_width": 250,
+          "detectedClass": "Woman",
           "confidenceInClass": 0.85,
-          "rect": {"x": 0.4, "y": 0.8, "w": 0.7, "h": 0.3}
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
         },
       ],
     },
@@ -71,18 +71,18 @@ class DummyData {
       "second": 6,
       "object": [
         {
-          "preview_height": 500,
+          "preview_height": 300,
           "preview_width": 400,
-          "detectedClass": "Person",
+          "detectedClass": "Woman",
           "confidenceInClass": 0.85,
           "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
         },
         {
-          "preview_height": 600,
-          "preview_width": 700,
-          "detectedClass": "Person",
+          "preview_height": 700,
+          "preview_width": 800,
+          "detectedClass": "Car",
           "confidenceInClass": 0.85,
-          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+          "rect": {"x": 0.4, "y": 0.3, "w": 0.2, "h": 0.1}
         },
       ],
     },
@@ -90,160 +90,176 @@ class DummyData {
       "second": 7,
       "object": [
         {
-          "preview_height": 500,
-          "preview_width": 400,
-          "detectedClass": "Person",
-          "confidenceInClass": 0.85,
-          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
-        },
-        {
           "preview_height": 600,
           "preview_width": 700,
-          "detectedClass": "Person",
+          "detectedClass": "School",
           "confidenceInClass": 0.85,
-          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
         },
       ],
     },
     {
-      "second": 7,
+      "second": 8,
       "object": [
         {
-          "preview_height": 500,
+          "preview_height": 300,
           "preview_width": 400,
-          "detectedClass": "Person",
+          "detectedClass": "Money",
           "confidenceInClass": 0.85,
           "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
         },
         {
-          "preview_height": 600,
-          "preview_width": 700,
+          "preview_height": 700,
+          "preview_width": 800,
           "detectedClass": "Person",
           "confidenceInClass": 0.85,
-          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+          "rect": {"x": 0.4, "y": 0.3, "w": 0.2, "h": 0.1}
         },
       ],
     },
     {
-      "second": 7,
+      "second": 9,
       "object": [
-        {
-          "preview_height": 500,
-          "preview_width": 400,
-          "detectedClass": "Person",
-          "confidenceInClass": 0.85,
-          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
-        },
         {
           "preview_height": 600,
           "preview_width": 700,
-          "detectedClass": "Person",
+          "detectedClass": "Wallet",
           "confidenceInClass": 0.85,
-          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
         },
       ],
     },
     {
-      "second": 7,
+      "second": 10,
       "object": [
         {
-          "preview_height": 500,
-          "preview_width": 400,
-          "detectedClass": "Person",
+          "preview_height": 150,
+          "preview_width": 250,
+          "detectedClass": "Cat",
           "confidenceInClass": 0.85,
           "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
-        },
-        {
-          "preview_height": 600,
-          "preview_width": 700,
-          "detectedClass": "Person",
-          "confidenceInClass": 0.85,
-          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
         },
       ],
     },
     {
-      "second": 7,
+      "second": 11,
       "object": [
         {
-          "preview_height": 500,
+          "preview_height": 300,
+          "preview_width": 400,
+          "detectedClass": "Cloud",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+        {
+          "preview_height": 700,
+          "preview_width": 800,
+          "detectedClass": "Plane",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.4, "y": 0.3, "w": 0.2, "h": 0.1}
+        },
+      ],
+    },
+    {
+      "second": 12,
+      "object": [
+        {
+          "preview_height": 200,
+          "preview_width": 300,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.4, "y": 0.2, "w": 0.2, "h": 0.1}
+        },
+      ],
+    },
+    {
+      "second": 13,
+      "object": [
+        {
+          "preview_height": 600,
+          "preview_width": 700,
+          "detectedClass": "School",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+      ],
+    },
+    {
+      "second": 14,
+      "object": [
+        {
+          "preview_height": 150,
+          "preview_width": 250,
+          "detectedClass": "Person",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+      ],
+    },
+    {
+      "second": 15,
+      "object": [
+        {
+          "preview_height": 300,
           "preview_width": 400,
           "detectedClass": "Person",
           "confidenceInClass": 0.85,
           "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
         },
         {
+          "preview_height": 700,
+          "preview_width": 800,
+          "detectedClass": "Traffic Lamp",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.4, "y": 0.3, "w": 0.2, "h": 0.1}
+        },
+      ],
+    },
+    {
+      "second": 16,
+      "object": [
+        {
           "preview_height": 600,
           "preview_width": 700,
           "detectedClass": "Person",
           "confidenceInClass": 0.85,
-          "rect": {"x": 0.3, "y": 0.2, "w": 0.4, "h": 0.2}
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+      ],
+    },
+    {
+      "second": 17,
+      "object": [
+        {
+          "preview_height": 300,
+          "preview_width": 400,
+          "detectedClass": "Truck",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
+        },
+        {
+          "preview_height": 700,
+          "preview_width": 800,
+          "detectedClass": "Bus",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.4, "y": 0.3, "w": 0.2, "h": 0.1}
+        },
+      ],
+    },
+    {
+      "second": 18,
+      "object": [
+        {
+          "preview_height": 600,
+          "preview_width": 700,
+          "detectedClass": "Car",
+          "confidenceInClass": 0.85,
+          "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2}
         },
       ],
     },
 
   ];
-
-  /* [
-    [
-      {
-        "rect": {"x": 0.1, "y": 0.1, "w": 0.1, "h": 0.1},
-        "detectedClass": "Object",
-        "confidenceInClass": 0.92,
-      },
-    ],
-    [
-      {
-        "rect": {"x": 0.2, "y": 0.4, "w": 0.2, "h": 0.1},
-        "detectedClass": "elma",
-        "confidenceInClass": 0.92,
-      },
-      {
-        "rect": {"x": 0.5, "y": 0.1, "w": 0.3, "h": 0.4},
-        "detectedClass": "Object",
-        "confidenceInClass": 0.92,
-      },
-    ],
-    [
-      {
-        "rect": {"x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2},
-        "detectedClass": "Person",
-        "confidenceInClass": 0.85,
-      },
-      {
-        "rect": {"x": 0.2, "y": 0.4, "w": 0.2, "h": 0.1},
-        "detectedClass": "elma",
-        "confidenceInClass": 0.92,
-      },
-      {
-        "rect": {"x": 0.5, "y": 0.1, "w": 0.3, "h": 0.4},
-        "detectedClass": "Object",
-        "confidenceInClass": 0.92,
-      },
-    ],
-  ]; */
-  static final List<int> secondValues = [1, 3, 6];
 }
 
-
- /* {
-   "status": 200,
-   "object_detection": [
-    "second":2,
-    "approvers": [
-               {
-           "detectedClass": "Person",
-        "confidenceInClass": 0.85,
-           "rect": [
-               {
-                   "x": 0.1, "y": 0.3, "w": 0.3, "h": 0.2
-               }
-           ]
-       },
-           ],
-
-       
-   ]
-} */
- 
 

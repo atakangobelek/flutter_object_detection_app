@@ -140,13 +140,7 @@ class _TextFormImageContainerState extends State<TextFormImageContainer> {
                       width: 32,
                     ),
                     Expanded(
-                        child: TextFormWidget(
-                      name: 'confidenceInClass',
-                      onChanged: (value) {
-                        ref.watch(offerModelProvider).confidenceInClass =
-                            double.parse(value);
-                      },
-                    )),
+                        child: Container()),
                   ],
                 ),
               ),

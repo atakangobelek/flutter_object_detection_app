@@ -7,16 +7,12 @@ ThemeData theme = ThemeData(
   useMaterial3: true,
   colorScheme: themeColor,
   textTheme: themeText,
-  navigationRailTheme: const NavigationRailThemeData().copyWith(
-    backgroundColor: themeColor.primary,
-  ),
   navigationDrawerTheme: const NavigationDrawerThemeData().copyWith(
     backgroundColor: themeColor.surface,
     indicatorSize: const Size(double.maxFinite, 200),
     indicatorColor: themeColor.primaryContainer,
   ),
   elevatedButtonTheme: elevatedButtonTheme,
-  cardTheme: cardTheme,
 );
 
 final elevatedButtonTheme = ElevatedButtonThemeData(
@@ -27,7 +23,3 @@ final elevatedButtonTheme = ElevatedButtonThemeData(
   ),
 );
 
-final cardTheme = CardTheme(
-    color: themeColor.surfaceVariant,
-    elevation: 4
-);

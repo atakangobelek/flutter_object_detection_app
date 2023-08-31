@@ -62,7 +62,7 @@ class BoundingBox extends StatelessWidget {
               ),
             ),
             child: Text(
-              "$detected ${(re.confidenceInClass * 100).toStringAsFixed(0)}%",
+              "$detected",
               style: const TextStyle(
                 color: Color.fromARGB(255, 77, 255, 0),
                 fontSize: 14.0,

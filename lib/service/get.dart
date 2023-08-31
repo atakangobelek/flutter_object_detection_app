@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter_video/utils/map.dart';
 
 class ApiService {
-  final Dio _dio = Dio(); // Dio nesnesini oluşturuyoruz
+  final Dio _dio = Dio(); 
 
   Future<List<dynamic>> fetchData(String endpoint) async {
     try {
