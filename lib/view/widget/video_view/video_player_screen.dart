@@ -23,7 +23,11 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
     super.initState();
 
     // Create and store the VideoPlayerController.
-    _VideoPlayerController = _VideoPlayerController = VideoPlayerController.asset("assets/videos/video2.mp4");
+    _VideoPlayerController = _VideoPlayerController = VideoPlayerController.networkUrl(
+      Uri.parse(
+        'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+      ),
+    );
     //_VideoPlayerController = VideoPlayerController.asset("assets/videos/video2.mp4");              video play assets
 
     
